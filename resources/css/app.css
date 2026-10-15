@@ -1,0 +1,26 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+    --bs-body-font-family: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --bs-body-bg: #f8f9fa;
+}
+
+/* sticky footer */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.badge-bean {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+.img-placeholder {
+    background-color: #f3e3c3;
+}
