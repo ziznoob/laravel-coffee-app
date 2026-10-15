@@ -1,4 +1,3 @@
-<laravel-boost-guidelines>
 # Laravel Application
 
 This repository contains a Laravel application. Complete the following setup before working on the user's request.
@@ -33,15 +32,3 @@ Linux:
 ```
 
 After installation, ask the user to restart their terminal. If the agent needs the restarted shell to continue, ask the user to reopen their terminal and rerun their original prompt.
-
-## Agent Setup
-
-Install Laravel Boost from the application root before making application changes:
-
-```sh
-composer require laravel/boost --dev
-php artisan boost:install
-```
-
-Boost replaces these bootstrap instructions with guidelines tailored to the application. After installation, read `AGENTS.md` again and continue with the user's original request using the generated guidelines.
-</laravel-boost-guidelines>
