@@ -48,3 +48,26 @@ php artisan test
 - Cart (React) with quantity update, remove and clear
 - Checkout that creates an order and reduces stock
 - Admin order list where you can view the products purchased and change the order status
+
+## Routes
+
+Pages are rendered by Blade. The JSON routes are only used by the React cart.
+
+| Method | URL | Returns | Used by |
+|---|---|---|---|
+| GET | `/` | Page | Homepage |
+| GET | `/products` | Page | Shop (search + filter) |
+| GET | `/cart` | Page | Mounts the React cart |
+| POST | `/cart/items` | Redirect / JSON | "Add to cart" form |
+| PATCH | `/cart/items/{variant}` | JSON | React cart: change quantity |
+| DELETE | `/cart/items/{variant}` | JSON | React cart: remove item |
+| DELETE | `/cart` | JSON | React cart: clear cart |
+| POST | `/cart/checkout` | JSON | React cart: place order |
+| GET | `/cart/success` | Page | Order confirmed |
+| GET / POST | `/login` | Page / Redirect | Admin login |
+| GET | `/admin/dashboard` | Page (login) | Dashboard |
+| GET | `/admin/orders` | Page (login) | Order list |
+| PATCH | `/admin/orders/{order}/status` | Redirect (login) | Change order status |
+| POST | `/admin/logout` | Redirect (login) | Log out |
+
+Full list: `php artisan route:list`
